@@ -7,11 +7,26 @@
     <title>RepairIT</title>
     <base href="/" />
     <link rel="preload" id="webassembly" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="icon-192.png" />
     <script type="importmap"></script>
 </head>
 
 <body>
-    <div id="app">Chargement...</div>
+    <div id="app">
+        <div class="chargement">
+            <div class="chargement-logo">R</div>
+            <p>Chargement de RepairIT…</p>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        Une erreur inattendue est survenue.
+        <a href="." class="reload">Recharger</a>
+        <span class="dismiss">✕</span>
+    </div>
     <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
 </body>
 
