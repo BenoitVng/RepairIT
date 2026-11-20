@@ -1,0 +1,29 @@
+<div class="entete-page">
+    <div>
+        <h1>@Titre</h1>
+        <p class="sous-titre">@Description</p>
+    </div>
+</div>
+<div class="carte carte-vide">
+    <div class="carte-vide-icone"><Icone Nom="@IconeNom" /></div>
+    <h2>Disponible en @Version</h2>
+    <p>@Detail</p>
+    <a class="bouton bouton-principal" href="">Retour à l'accueil</a>
+</div>
+
+@code {
+    [Parameter]
+    public string Titre { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Description { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Version { get; set; } = string.Empty;
+
+    [Parameter]
+    public string IconeNom { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Detail { get; set; } = "Cette fonctionnalité fait partie d'une prochaine version de RepairIT.";
+}

@@ -1,3 +1,23 @@
-@inherits LayoutComponentBase
+﻿@inherits LayoutComponentBase
 
-@Body
+<div class="app">
+    <aside class="sidebar">
+        <a class="marque" href="">
+            <span class="marque-logo">R</span>
+            <span class="marque-texte">Repair<strong>IT</strong></span>
+        </a>
+        <NavMenu />
+        <div class="sidebar-pied">Version 1 · Catalogue</div>
+    </aside>
+    <div class="contenu">
+        <header class="barre-haut">
+            <span class="barre-haut-titre">Vente &amp; réparation d'ordinateurs</span>
+            <a class="bouton bouton-contour" href="connexion">
+                <Icone Nom="connexion" /> Connexion
+            </a>
+        </header>
+        <main class="page">
+            @Body
+        </main>
+    </div>
+</div>
