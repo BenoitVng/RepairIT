@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RepairIT.CatalogService.Configuration;
 using RepairIT.CatalogService.Data;
+using RepairIT.CatalogService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -8,6 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.Configure<DatabaseOptions>(builder.Configuration.GetSection(DatabaseOptions.Section));
 builder.Services.AddDbContext<CatalogDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("CatalogDb")));
+builder.Services.AddScoped<IOrdinateurService, OrdinateurService>();
 builder.Services.AddScoped<CatalogDbInitializer>();
 
 var app = builder.Build();
